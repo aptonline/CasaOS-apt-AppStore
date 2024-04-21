@@ -1,0 +1,38 @@
+name: ollama
+services:
+  ollama:
+    cpu_shares: 90
+    command: []
+    container_name: ollama
+    deploy:
+      resources:
+        limits:
+          memory: 4096M
+    hostname: ollama
+    image: ollama/ollama:latest
+    ports:
+      - target: 11434
+        published: "11434"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ollama/config
+        target: /root/.ollama
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+x-casaos:
+  author: apt
+  category: Chat
+  hostname: ""
+  icon: https://github.com/aptonline/CasaOS-apt-AppStore/Apps/Ollama/icon.png
+  index: /
+  is_uncontrolled: false
+  port_map: "11434"
+  scheme: http
+  store_app_id: optimistic_federico
+  title:
+    custom: Ollama
