@@ -25,7 +25,7 @@ services:
     environment: []
     network_mode: bridge
 x-casaos:
-  author: apt
+  author: ollama
   category: Chat
   hostname: ""
   icon: https://github.com/aptonline/CasaOS-apt-AppStore/Apps/Ollama/icon.png
