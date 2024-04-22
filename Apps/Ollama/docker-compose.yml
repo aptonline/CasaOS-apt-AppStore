@@ -33,6 +33,6 @@ x-casaos:
   is_uncontrolled: false
   port_map: "11434"
   scheme: http
-  store_app_id: optimistic_federico
+  store_app_id: ollama
   title:
     custom: Ollama
